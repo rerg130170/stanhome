@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StanInspiration - Catálogo Interactivo Profesional</title>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Vinculación del archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado fijo superior -->
+    <header class="main-header">
+        
+        <!-- 1. Contenedor de Navegación (Sticky Header) -->
+        <div class="navbar-container" id="navbarContainer">
+            <div class="navbar-content">
+                <!-- Logotipo clickable -->
+                <a href="#" class="logo" id="logoLink" aria-label="Volver al inicio">
+                    <span class="logo-text">Stan<span class="accent-text">Inspiration</span></span>
+                </a>
+
+                <!-- Menú de categorías con desplegable vertical -->
+                <nav class="nav-menu">
+                    <button class="menu-toggle-btn" id="menuToggleBtn" aria-haspopup="true" aria-expanded="false">
+                        Categorías <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <!-- Menú desplegable semi-transparente -->
+                    <ul class="dropdown-list" id="dropdownList">
+                        <li><a href="#section-damas" class="dropdown-item">Para Damas</a></li>
+                        <li><a href="#section-caballeros" class="dropdown-item">Para Caballeros</a></li>
+                        <li><a href="#section-niños" class="dropdown-item">Para Niños</a></li>
+                        <li><a href="#section-hogar" class="dropdown-item">Para el Hogar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 2. Contenedor del Carrusel (Flujo Normal) -->
+        <div class="carousel-container" id="carouselSection">
+            <!-- Botón Izquierdo -->
+            <button class="carousel-control prev" id="carouselPrev" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <!-- Ventana de visualización de imágenes -->
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Diapositiva 1 -->
+                    <div class="carousel-slide">
+                        <img src="imagen/Dama10.jpg" alt="Línea Damas">
+                        <div class="slide-caption">Para Damas</div>
+                    </div>
+                    <!-- Diapositiva 2 -->
+                    <div class="carousel-slide">
+                        <img src="imagen/Caballero10.jpg" alt="Línea Caballeros">
+                        <div class="slide-caption">Para Caballeros</div>
+                    </div>
+                    <!-- Diapositiva 3 -->
+                    <div class="carousel-slide">
+                        <img src="imagen/niño4.jpg" alt="Línea Niños">
+                        <div class="slide-caption">Para Niños</div>
+                    </div>
+                    <!-- Diapositiva 4 -->
+                    <div class="carousel-slide">
+                        <img src="imagen/Nova_page-0001.jpg" alt="Línea Hogar">
+                        <div class="slide-caption">Para el Hogar</div>
+                    </div>
+                    <!-- Diapositiva 5 -->
+                    <div class="carousel-slide">
+                        <img src="imagen/Nova_page-0002.jpg" alt="Línea Bienestar">
+                        <div class="slide-caption">Bienestar</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Derecho -->
+            <button class="carousel-control next" id="carouselNext" aria-label="Siguiente imagen">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú de pestañas centrado para navegación rápida entre secciones -->
+    <nav class="tabs-navigation" id="tabsNavigation">
+        <div class="tabs-wrapper">
+            <a href="#section-damas" class="tab-link" data-target="section-damas">Damas</a>
+            <a href="#section-caballeros" class="tab-link" data-target="section-caballeros">Caballeros</a>
+            <a href="#section-niños" class="tab-link" data-target="section-niños">Niños</a>
+            <a href="#section-hogar" class="tab-link" data-target="section-hogar">Hogar</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal con las 4 Secciones -->
+    <main class="main-content">
+
+        <!-- ================= SECCIÓN: DAMAS ================= -->
+        <section id="section-damas" class="product-section">
+            <h2 class="section-title">Cuidado para Damas</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Crema Facial Regeneradora" 
+                         data-price="$24.90" 
+                         data-img="imagen/Dama11.jpg" 
+                         data-desc="Fórmula nutritiva con colágeno que ayuda a restaurar la firmeza natural de la piel durante el ciclo de descanso nocturno.">
+                    <div class="image-container">
+                        <img src="imagen/Dama11.jpg" alt="Crema Facial">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Crema Facial Regeneradora</h3>
+                        <p class="product-price">$24.90</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 2 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Aceite Corporal de Almendras" 
+                         data-price="$18.20" 
+                         data-img="imagen/Dama10.jpg" 
+                         data-desc="Humectación profunda para pieles secas enriquecida con extracto de almendras dulces naturales.">
+                    <div class="image-container">
+                        <img src="imagen/Dama10.jpg">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Aceite Corporal de Almendras</h3>
+                        <p class="product-price">$18.20</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 3 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Loción Humectante de Manos" 
+                         data-price="$9.50" 
+                         data-img="imagen/Dama12.jpg" 
+                         data-desc="Crea una película protectora invisible contra la resequedad provocada por factores ambientales cotidianos.">
+                    <div class="image-container">
+                        <img src="imagen/Dama12.jpg" alt="Loción de Manos">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Loción Humectante de Manos</h3>
+                        <p class="product-price">$9.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 4 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Sérum Facial Ácido Hialurónico" 
+                         data-price="$29.99" 
+                         data-img="imagen/Dama13.jpg" 
+                         data-desc="Sérum hidratante concentrado para atenuar líneas de expresión finas y proporcionar luminosidad.">
+                    <div class="image-container">
+                        <img src="imagen/Dama13.jpg" alt="Sérum Revitalizante">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Sérum Facial Ácido Hialurónico</h3>
+                        <p class="product-price">$29.99</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 5 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Mascarilla de Arcilla Purificante" 
+                         data-price="$12.40" 
+                         data-img="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Absorbe impurezas y exceso de grasa en los poros cutáneos, promoviendo una tez equilibrada y limpia.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=400&q=80" alt="Mascarilla Arcilla">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Mascarilla de Arcilla Purificante</h3>
+                        <p class="product-price">$12.40</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 6 -->
+                <article class="product-card" 
+                         data-category="damas"
+                         data-title="Exfoliante Corporal de Albaricoque" 
+                         data-price="$15.00" 
+                         data-img="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Remueve con suavidad las células muertas superficiales del cuerpo, promoviendo una textura sedosa.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" alt="Exfoliante Corporal">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Exfoliante Corporal de Albaricoque</h3>
+                        <p class="product-price">$15.00</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: CABALLEROS ================= -->
+        <section id="section-caballeros" class="product-section">
+            <h2 class="section-title">Cuidado para Caballeros</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Loción After Shave Fresh" 
+                         data-price="$16.50" 
+                         data-img="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Disminuye la irritación y resequedad pos-afeitado aportando una sensación de frescura inmediata.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400&q=80" alt="After Shave">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Loción After Shave Fresh</h3>
+                        <p class="product-price">$16.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 2 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Perfume Masculino Deep Blue" 
+                         data-price="$32.00" 
+                         data-img="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Notas marinas y acordes amaderados persistentes ideales para el uso diario o eventos especiales.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=400&q=80" alt="Fragancia Masculina">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Perfume Masculino Deep Blue</h3>
+                        <p class="product-price">$32.00</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 3 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Shampoo Control Caspa Activo" 
+                         data-price="$14.90" 
+                         data-img="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Limpia profundamente el exceso de sebo y previene la descamación del cuero cabelludo masculino.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" alt="Shampoo Anticaspa">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Shampoo Control Caspa Activo</h3>
+                        <p class="product-price">$14.90</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 4 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Cera Moldeadora Efecto Mate" 
+                         data-price="$11.20" 
+                         data-img="imagen/Caballero12.jpg" 
+                         data-desc="Fijación media flexible que estiliza el cabello con un acabado seco y natural sin dejar residuos pesados.">
+                    <div class="image-container">
+                        <img src="imagen/Caballero12.jpg" alt="Cera Modeladora">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Cera Moldeadora Efecto Mate</h3>
+                        <p class="product-price">$11.20</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 5 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Crema de Afeitar Espuma Densa" 
+                         data-price="$8.50" 
+                         data-img="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Facilita el deslizamiento preciso de las navajas protegiendo el rostro de raspaduras leves.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Jabón de Afeitar">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Crema de Afeitar Espuma Densa</h3>
+                        <p class="product-price">$8.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 6 -->
+                <article class="product-card" 
+                         data-category="caballeros"
+                         data-title="Gel de Ducha Deportivo 3 en 1" 
+                         data-price="$13.80" 
+                         data-img="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&q=80" 
+                         data-desc="Limpia cuerpo, cabello y rostro de forma práctica, ideal para llevar al gimnasio o viajes cortos.">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&q=80" alt="Gel de Ducha">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Gel de Ducha Deportivo 3 en 1</h3>
+                        <p class="product-price">$13.80</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: NIÑOS ================= -->
+        <section id="section-niños" class="product-section">
+            <h2 class="section-title">Protección para Niños</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Shampoo Suave Sin Lágrimas" 
+                         data-price="$12.00" 
+                         data-img="imagen/niño1.jpg" 
+                         data-desc="Fórmula balanceada libre de sulfatos que cuida la estructura capilar de niños y bebés sin irritar los ojos.">
+                    <div class="image-container">
+                        <img src="imagen/niño1.jpg" alt="Shampoo Niños">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Shampoo Suave Sin Lágrimas</h3>
+                        <p class="product-price">$12.00</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 2 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Colonia Infantil Dulce Sueño" 
+                         data-price="$14.50" 
+                         data-img="imagen/niño2.jpg" 
+                         data-desc="Esencia floral sutil que evoca calma, óptima para aplicar ligeramente en la ropa de dormir.">
+                    <div class="image-container">
+                        <img src="imagen/niño2.jpg" alt="Colonia Infantil">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Colonia Infantil Dulce Sueño</h3>
+                        <p class="product-price">$14.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 3 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Crema Protectora Antipañalitis" 
+                         data-price="$10.90" 
+                         data-img="imagen/niño3.jpg" 
+                         data-desc="Tratamiento con óxido de zinc y caléndula orgánica para aliviar la inflamación o rozaduras en la piel.">
+                    <div class="image-container">
+                        <img src="imagen/niño3.jpg" alt="Crema Antipañalitis">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Crema Protectora Antipañalitis</h3>
+                        <p class="product-price">$10.90</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 4 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Jabón Líquido Corporal Neutro" 
+                         data-price="$11.50" 
+                         data-img="imagen/niño5.jpg" 
+                         data-desc="Apto para la higiene de pieles sensibles, libre de colorantes y aromatizantes sintéticos agresivos.">
+                    <div class="image-container">
+                        <img src="imagen/niño5.jpg" alt="Jabón Líquido">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Jabón Líquido Corporal Neutro</h3>
+                        <p class="product-price">$11.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 5 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Spray Desenredante de Cabello" 
+                         data-price="$9.99" 
+                         data-img="imagen/niño6.jpg" 
+                         data-desc="Fórmula ligera sin enjuague que simplifica el cepillado diario de cabellos largos o rizados.">
+                    <div class="image-container">
+                        <img src="imagen/niño6.jpg" alt="Desenredante Cabello">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Spray Desenredante de Cabello</h3>
+                        <p class="product-price">$9.99</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 6 -->
+                <article class="product-card" 
+                         data-category="niños"
+                         data-title="Bloqueador Solar SPF 50 Kids" 
+                         data-price="$19.50" 
+                         data-img="imagen/niño4.jpg" 
+                         data-desc="Filtro solar mineral de amplio espectro, hipoalergénico y con alta resistencia al sudor y agua.">
+                    <div class="image-container">
+                        <img src="imagen/niño4.jpg" alt="Protector Solar Infantil">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Bloqueador Solar SPF 50 Kids</h3>
+                        <p class="product-price">$19.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: HOGAR ================= -->
+        <section id="section-hogar" class="product-section">
+            <h2 class="section-title">Higiene para el Hogar</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Limpiador Concentrado Citrus" 
+                         data-price="$18.50" 
+                         data-img="imagen/Nova_page-0001.jpg" 
+                         data-desc="Desinfectante biodegradable de gran rendimiento que remueve grasa y suciedad de la cocina o el baño.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0001.jpg" alt="Limpiador Citrus">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Limpiador Concentrado Citrus</h3>
+                        <p class="product-price">$18.50</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 2 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Aromatizante Lavanda Relax" 
+                         data-price="$7.20" 
+                         data-img="imagen/Nova_page-0002.jpg" 
+                         data-desc="Spray desodorizante que neutraliza moléculas de mal olor liberando un suave aroma a lavanda campestre.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0003.jpg" alt="Aromatizante Ambiental">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Aromatizante Lavanda Relax</h3>
+                        <p class="product-price">$7.20</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 3 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Detergente Lavatrastes Activo" 
+                         data-price="$9.80" 
+                         data-img="imagen/Nova_page-0004.jpg" 
+                         data-desc="Desengrasante de alta espuma y enjuague rápido que cuida el pH de la piel del usuario.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0004.jpg" alt="Lavatrastes Líquido">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Detergente Lavatrastes Activo</h3>
+                        <p class="product-price">$9.80</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 4 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Suavizante de Telas Aroma Soft" 
+                         data-price="$12.90" 
+                         data-img="imagen/Nova_page-0005.jpg" 
+                         data-desc="Suaviza las fibras textiles de sus prendas facilitando el planchado y atenuando la estática.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0005.jpg" alt="Suavizante Textil">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Suavizante de Telas Aroma Soft</h3>
+                        <p class="product-price">$12.90</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 5 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Desinfectante de Superficies Pro" 
+                         data-price="$14.00" 
+                         data-img="imagen/Nova_page-0007.jpg" 
+                         data-desc="Fórmula germicida de amplio espectro para desinfectar manijas, escritorios y mesas del hogar.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0007.jpg" alt="Desinfectante Multiusos">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Desinfectante de Superficies Pro</h3>
+                        <p class="product-price">$14.00</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+                <!-- Producto 6 -->
+                <article class="product-card" 
+                         data-category="hogar"
+                         data-title="Detergente Líquido Ropa Delicada" 
+                         data-price="$16.80" 
+                         data-img="imagen/Nova_page-0006.jpg" 
+                         data-desc="Limpia en profundidad las fibras finas de lana, seda e hilos delicados protegiendo los tonos de tinte.">
+                    <div class="image-container">
+                        <img src="imagen/Nova_page-0006.jpg" alt="Detergente Ropa">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="product-title">Detergente Líquido Ropa Delicada</h3>
+                        <p class="product-price">$16.80</p>
+                        <button class="btn-add-cart">Detalles</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Ventana flotante de detalles (Modal) -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="" alt="" id="modalProductImg">
+                </div>
+                <div class="modal-text-container">
+                    <h2 id="modalProductTitle">Nombre del Producto</h2>
+                    <p class="modal-price" id="modalProductPrice">$0.00</p>
+                    <p class="modal-description" id="modalProductDesc">Detalles del artículo.</p>
+                    <button class="btn-primary-action">Consultar disponibilidad</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vinculación del código Javascript principal -->
+    <script src="app.js"></script>
+</body>
+</html>
